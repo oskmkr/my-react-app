@@ -7,10 +7,19 @@ class Label extends Component {
     return (
       <div className="Label">
         <p>
-          Label
+            {this.getText()}
         </p>
       </div>
     );
+  }
+
+  getText() {
+
+      if(!this.props.text) {
+          return "button";
+      }
+
+      return this.props.text;
   }
 }
 
